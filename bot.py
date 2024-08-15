@@ -20,7 +20,7 @@ def markup_(message):
     bot.send_message(message.chat.id, "Please select the resolution:", reply_markup=markup)
     return markup
 
-@bot.message_handler(commands=['youtube'])
+@bot.message_handler(commands=['start'])
 def you(message):
     bot.send_message(message.chat.id, 'Please paste the YouTube video URL:')
     bot.register_next_step_handler(message, process_url)
